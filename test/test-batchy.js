@@ -30,7 +30,12 @@ Test('test batchy', t => {
       t.ok(typeof config.services.cal.script.main === 'function', 'script is function');
       t.ok(typeof config.services.npm.script.main === 'function', 'script is function');
 
-      t.end();
+      t.test('test validation', t => {
+
+        t.ok(batchy._validate(config), 'config is valid');
+
+        t.end();
+      });
     });
   });
 

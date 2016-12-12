@@ -9,8 +9,10 @@
   "author": "Shaun Warman",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.1.4",
     "caller": "^1.0.1",
     "debug": "^2.3.3",
+    "joi": "^10.0.5",
     "node-cron": "^1.1.2",
     "shortstop": "^1.0.3",
     "shortstop-handlers": "^1.0.1"
