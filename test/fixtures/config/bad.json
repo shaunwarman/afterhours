@@ -1,0 +1,10 @@
+{
+  "cron": "* 3 * * *",
+  "services": {
+    "npm": {
+      "script": "require:./test/fixtures/lib/npm.js",
+      "emit": false,
+      "priority": 2
+    }
+  }
+}

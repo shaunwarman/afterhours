@@ -5,11 +5,6 @@
       "script": "require:./test/fixtures/lib/cal.js",
       "emit": true,
       "priority": 1
-    },
-    "npm": {
-      "script": "require:./test/fixtures/lib/npm.js",
-      "emit": false,
-      "priority": 2
     }
   }
 }

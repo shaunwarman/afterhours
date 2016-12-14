@@ -1,6 +1,5 @@
 module.exports = {
-  start: true,
-  main: () => {
+  start: () => {
     console.log('npm');
   }
 }
