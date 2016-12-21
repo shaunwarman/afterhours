@@ -1,10 +1,10 @@
 {
-  "name": "batchy",
+  "name": "afterhours",
   "version": "0.0.1",
   "description": "A json to config object manager",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/tape/bin/tape test/test-batchy.js"
+    "test": "./node_modules/tape/bin/tape test/test-afterhours.js"
   },
   "author": "Shaun Warman",
   "license": "ISC",

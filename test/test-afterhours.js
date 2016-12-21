@@ -1,22 +1,22 @@
-const Batchy = require('../lib');
+const Afterhours = require('../lib');
 const Test = require('tape');
 
-Test('test batchy', t => {
+Test('test afterhours', t => {
 
   t.test('create batchy object', t => {
-    const batchy = new Batchy();
+    const afterhours = new Afterhours();
 
-    t.ok(batchy, 'new batchy');
-    t.equal(typeof batchy, 'object');
+    t.ok(afterhours, 'new afterhours');
+    t.equal(typeof afterhours, 'object');
     t.end();
   });
 
-  t.test('test load json success', t => {
-    const batchy = new Batchy();
+  t.test('load json success', t => {
+    const afterhours = new Afterhours();
 
     const json = require('./fixtures/config/good.json');
 
-    const config = batchy.load(json, (error, config) => {
+    const config = afterhours.load(json, (error, config) => {
       if (error) {
         t.fail(error, 'error loading config');
       }
@@ -26,25 +26,25 @@ Test('test batchy', t => {
       t.equal(typeof config.services.cal.script.main, 'function');
 
       t.test('test validation', t => {
-        t.ok(batchy._validate(config), 'config is valid');
+        t.ok(afterhours._validate(config), 'config is valid');
         t.end();
       });
     });
   });
 
-  t.test('test load json failure', t => {
-    const batchy = new Batchy();
+  t.test('load json failure', t => {
+    const afterhours = new Afterhours();
 
     const json = require('./fixtures/config/bad.json');
 
-    const config = batchy.load(json, (error, config) => {
+    const config = afterhours.load(json, (error, config) => {
       if (error) {
         t.fail(error, 'error loading config');
       }
 
-      t.test('test validation failure', t => {
+      t.test('validation failure', t => {
         try {
-          batchy._validate(config);
+          afterhours._validate(config);
         } catch (e) {
           t.ok(e, 'config is invalid');
           t.equal(e.message, `Services don't pass validation!`);
