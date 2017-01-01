@@ -1,5 +1,6 @@
 module.exports = {
-  main: () => {
+  main: (callback) => {
     console.log('cal');
+    callback();
   }
 }

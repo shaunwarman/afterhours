@@ -1,9 +1,8 @@
 {
-  "cron": "* 3 * * *",
   "services": {
     "cal": {
       "script": "require:./test/fixtures/lib/cal.js",
-      "emit": true,
+      "emit": false,
       "priority": 1
     }
   }

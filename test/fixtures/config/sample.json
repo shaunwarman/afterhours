@@ -1,0 +1,14 @@
+{
+  "services": {
+    "cal": {
+      "script": "require:./test/fixtures/lib/cal.js",
+      "emit": true,
+      "priority": 1
+    },
+    "sample": {
+      "script": "require:./test/fixtures/lib/sample.js",
+      "emit": false,
+      "priority": 2
+    }
+  }
+}

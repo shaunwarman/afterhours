@@ -1,5 +1,6 @@
 module.exports = {
-  start: () => {
+  start: (callback) => {
     console.log('npm');
+    callback();
   }
 }
